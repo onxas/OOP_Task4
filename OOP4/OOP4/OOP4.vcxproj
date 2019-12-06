@@ -133,12 +133,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Room.cpp" />
     <ClCompile Include="SettingsForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Capacity.h" />
+    <ClInclude Include="CapacityCode.h" />
+    <ClInclude Include="Comfort.h" />
+    <ClInclude Include="ComfortCode.h" />
+    <ClInclude Include="Room.h" />
     <ClInclude Include="SettingsForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SettingsForm.resx">
+      <DependentUpon>SettingsForm.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
