@@ -1,6 +1,14 @@
 #pragma once
 #include "CapacityCode.h"
-ref struct Capacity {
+ref class Capacity
+{
+private:
+	CapacityCode code;
 	int price;
-	CapacityCode capacityCode;
+public:
+	Capacity(CapacityCode code, int price);
+	CapacityCode getCode();
+	int getPrice();
+	System::String^ getCapacityString();
 };
+

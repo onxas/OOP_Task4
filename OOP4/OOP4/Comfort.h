@@ -1,6 +1,14 @@
 #pragma once
 #include "ComfortCode.h"
-ref struct Comfort {
+ref class Comfort
+{
+private:
+	ComfortCode code;
 	int price;
-	ComfortCode comfortCode;
+public:
+	Comfort(ComfortCode code, int price);
+	ComfortCode getCode();
+	int getPrice();
+	System::String^ getComfortString();
 };
+

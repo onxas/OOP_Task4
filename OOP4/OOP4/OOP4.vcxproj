@@ -90,6 +90,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>Default</LanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalDependencies />
@@ -133,6 +134,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Capacity.cpp" />
+    <ClCompile Include="Comfort.cpp" />
+    <ClCompile Include="MainForm.cpp" />
+    <ClCompile Include="Request.cpp" />
     <ClCompile Include="Room.cpp" />
     <ClCompile Include="SettingsForm.cpp" />
   </ItemGroup>
@@ -141,12 +146,20 @@
     <ClInclude Include="CapacityCode.h" />
     <ClInclude Include="Comfort.h" />
     <ClInclude Include="ComfortCode.h" />
+    <ClInclude Include="MainForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Request.h" />
+    <ClInclude Include="RequestType.h" />
     <ClInclude Include="Room.h" />
     <ClInclude Include="SettingsForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SettingsForm.resx">
       <DependentUpon>SettingsForm.h</DependentUpon>
     </EmbeddedResource>

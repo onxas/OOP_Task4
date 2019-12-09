@@ -1,6 +1,6 @@
-#include "SettingsForm.h"
 using namespace System;
 using namespace System::Windows::Forms;
+#include "SettingsForm.h"
 
 [STAThreadAttribute]
 void Main(array<String^>^ args) {

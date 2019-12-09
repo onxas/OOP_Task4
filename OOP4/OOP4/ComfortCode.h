@@ -1,4 +1,4 @@
 #pragma once
-enum class ComfortCode {
+enum ComfortCode {
 	Простой, полулюкс, люкс
 };

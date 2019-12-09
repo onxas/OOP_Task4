@@ -1,4 +1,5 @@
 #pragma once
- enum class CapacityCode{
+ enum CapacityCode{
 	Одноместный,Двуместный,Трёхместный,Четырёхместный
 };
+ 
