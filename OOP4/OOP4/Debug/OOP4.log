@@ -1,0 +1,7 @@
+﻿  MainForm.cpp
+  SettingsForm.cpp
+D:\OOP\OOP_Task4\OOP4\OOP4\MainForm.h(833,1): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+  Создание кода...
+D:\OOP\OOP_Task4\OOP4\OOP4\MainForm.h(833,1): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+  Capacity.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  OOP4.vcxproj -> D:\OOP\OOP_Task4\OOP4\Debug\OOP4.exe
