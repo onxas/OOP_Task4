@@ -58,6 +58,14 @@ namespace OOP4 {
 
 
 	private: System::Windows::Forms::ErrorProvider^ errorProvider1;
+	private: System::Windows::Forms::TextBox^ maxRequestBox;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::TextBox^ minRequestBox;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Label^ speedLabel;
+
+	private: System::Windows::Forms::TrackBar^ SpeedBar;
+	private: System::Windows::Forms::Label^ label7;
 	private: System::ComponentModel::IContainer^ components;
 
 
@@ -97,9 +105,17 @@ namespace OOP4 {
 			this->CapcityPriceBox = (gcnew System::Windows::Forms::TextBox());
 			this->ComfortPriceBox = (gcnew System::Windows::Forms::TextBox());
 			this->errorProvider1 = (gcnew System::Windows::Forms::ErrorProvider(this->components));
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->minRequestBox = (gcnew System::Windows::Forms::TextBox());
+			this->maxRequestBox = (gcnew System::Windows::Forms::TextBox());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->speedLabel = (gcnew System::Windows::Forms::Label());
+			this->SpeedBar = (gcnew System::Windows::Forms::TrackBar());
+			this->label7 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->SettingsDaysTrackBar))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->SettingsRoomsTrackBar))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->errorProvider1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->SpeedBar))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// SettingsDaysTrackBar
@@ -129,7 +145,7 @@ namespace OOP4 {
 			this->SettingsLabel2->AutoSize = true;
 			this->SettingsLabel2->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->SettingsLabel2->Location = System::Drawing::Point(12, 119);
+			this->SettingsLabel2->Location = System::Drawing::Point(16, 97);
 			this->SettingsLabel2->Name = L"SettingsLabel2";
 			this->SettingsLabel2->Size = System::Drawing::Size(163, 21);
 			this->SettingsLabel2->TabIndex = 2;
@@ -137,7 +153,7 @@ namespace OOP4 {
 			// 
 			// SettingsRoomsTrackBar
 			// 
-			this->SettingsRoomsTrackBar->Location = System::Drawing::Point(12, 143);
+			this->SettingsRoomsTrackBar->Location = System::Drawing::Point(16, 121);
 			this->SettingsRoomsTrackBar->Maximum = 30;
 			this->SettingsRoomsTrackBar->Minimum = 20;
 			this->SettingsRoomsTrackBar->Name = L"SettingsRoomsTrackBar";
@@ -162,7 +178,7 @@ namespace OOP4 {
 			this->SettingsRoomsValueLabel->AutoSize = true;
 			this->SettingsRoomsValueLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->SettingsRoomsValueLabel->Location = System::Drawing::Point(174, 143);
+			this->SettingsRoomsValueLabel->Location = System::Drawing::Point(178, 121);
 			this->SettingsRoomsValueLabel->Name = L"SettingsRoomsValueLabel";
 			this->SettingsRoomsValueLabel->Size = System::Drawing::Size(28, 21);
 			this->SettingsRoomsValueLabel->TabIndex = 5;
@@ -173,7 +189,7 @@ namespace OOP4 {
 			this->ApplySettingsButton->BackColor = System::Drawing::SystemColors::Control;
 			this->ApplySettingsButton->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->ApplySettingsButton->Location = System::Drawing::Point(296, 167);
+			this->ApplySettingsButton->Location = System::Drawing::Point(293, 228);
 			this->ApplySettingsButton->Name = L"ApplySettingsButton";
 			this->ApplySettingsButton->Size = System::Drawing::Size(75, 30);
 			this->ApplySettingsButton->TabIndex = 6;
@@ -240,11 +256,86 @@ namespace OOP4 {
 			// 
 			this->errorProvider1->ContainerControl = this;
 			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label4->Location = System::Drawing::Point(406, 169);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(215, 21);
+			this->label4->TabIndex = 13;
+			this->label4->Text = L"Минимальное время заявки:";
+			// 
+			// minRequestBox
+			// 
+			this->minRequestBox->Location = System::Drawing::Point(410, 193);
+			this->minRequestBox->Name = L"minRequestBox";
+			this->minRequestBox->Size = System::Drawing::Size(100, 20);
+			this->minRequestBox->TabIndex = 14;
+			// 
+			// maxRequestBox
+			// 
+			this->maxRequestBox->Location = System::Drawing::Point(410, 243);
+			this->maxRequestBox->Name = L"maxRequestBox";
+			this->maxRequestBox->Size = System::Drawing::Size(100, 20);
+			this->maxRequestBox->TabIndex = 16;
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label5->Location = System::Drawing::Point(406, 219);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(220, 21);
+			this->label5->TabIndex = 15;
+			this->label5->Text = L"Максимальное время заявки:";
+			// 
+			// speedLabel
+			// 
+			this->speedLabel->AutoSize = true;
+			this->speedLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->speedLabel->Location = System::Drawing::Point(178, 219);
+			this->speedLabel->Name = L"speedLabel";
+			this->speedLabel->Size = System::Drawing::Size(19, 21);
+			this->speedLabel->TabIndex = 19;
+			this->speedLabel->Text = L"3";
+			// 
+			// SpeedBar
+			// 
+			this->SpeedBar->Location = System::Drawing::Point(16, 219);
+			this->SpeedBar->Minimum = 1;
+			this->SpeedBar->Name = L"SpeedBar";
+			this->SpeedBar->Size = System::Drawing::Size(156, 45);
+			this->SpeedBar->TabIndex = 18;
+			this->SpeedBar->Value = 3;
+			this->SpeedBar->Scroll += gcnew System::EventHandler(this, &SettingsForm::SpeedBar_Scroll);
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label7->Location = System::Drawing::Point(16, 171);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(258, 42);
+			this->label7->TabIndex = 17;
+			this->label7->Text = L"Скорость моделирования\r\n(реальных секунд за час в модели)\r\n";
+			// 
 			// SettingsForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(665, 209);
+			this->ClientSize = System::Drawing::Size(661, 270);
+			this->Controls->Add(this->speedLabel);
+			this->Controls->Add(this->SpeedBar);
+			this->Controls->Add(this->label7);
+			this->Controls->Add(this->maxRequestBox);
+			this->Controls->Add(this->label5);
+			this->Controls->Add(this->minRequestBox);
+			this->Controls->Add(this->label4);
 			this->Controls->Add(this->ComfortPriceBox);
 			this->Controls->Add(this->CapcityPriceBox);
 			this->Controls->Add(this->label3);
@@ -265,6 +356,7 @@ namespace OOP4 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->SettingsDaysTrackBar))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->SettingsRoomsTrackBar))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->errorProvider1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->SpeedBar))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -290,9 +382,12 @@ namespace OOP4 {
 		clear();
 		int nomera = System::Int32::Parse(this->SettingsRoomsValueLabel->Text);
 		int dni = System::Int32::Parse(this->SettingsDaysValueLabel->Text);
+		int speed = System::Int32::Parse(this->speedLabel->Text);
 		int basePrice;
 		int comfortPrice;
 		int capacityPrice;
+		int minRequest;
+		int maxRequest;
 		bool result = System::Int32::TryParse(this->BasePriceBox->Text, basePrice);
 		if (!result || basePrice <= 0) {
 			errorProvider1->SetError(BasePriceBox, "Ошибка!");
@@ -308,14 +403,28 @@ namespace OOP4 {
 					errorProvider1->SetError(ComfortPriceBox, "Ошибка!");
 				}
 				else {
-					MainForm^ form = gcnew MainForm(nomera, dni,basePrice,capacityPrice,comfortPrice);
-					form->Show();
-					this->Hide();
+					result = System::Int32::TryParse(this->minRequestBox->Text, minRequest);
+					if (!result || minRequest <= 1)
+						errorProvider1->SetError(minRequestBox, "Ошибка");
+					else {
+						result = System::Int32::TryParse(this->minRequestBox->Text, maxRequest);
+						if (!result || maxRequest < minRequest)
+							errorProvider1->SetError(maxRequestBox, "Ошибка");
+
+						else {
+							MainForm^ form = gcnew MainForm(nomera, dni, basePrice, capacityPrice, comfortPrice,minRequest,maxRequest,speed);
+							form->Show();
+							this->Hide();
+						}
+					}
 				}
 			}
 		}
 		
 	}
 	
-	};
+	private: System::Void SpeedBar_Scroll(System::Object^ sender, System::EventArgs^ e) {
+		this->speedLabel->Text = this->SpeedBar->Value.ToString();
+	}
+};
 }

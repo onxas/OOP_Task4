@@ -9,6 +9,7 @@ private:
 	Comfort^ comfort;
 	bool available;
 	System::DateTime^ leaveDate;
+	System::DateTime^ inDate;
 public:
 	Room(Capacity^ capacity, Comfort^ comfort, int basePrice);
 	Comfort^ getComfort();
@@ -18,5 +19,7 @@ public:
 	void setAvaliable(bool a);
 	System::DateTime^ getLeaveDate();
 	void setLeaveDate(System::DateTime^ date);
+	System::DateTime^ getInDate();
+	void setInDate(System::DateTime^ date);
 };
 
